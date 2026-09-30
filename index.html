@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScentMan | O Blog do Perfume Masculino</title>
+    <title>Kaua Johari | Perfumaria Masculina</title>
     <!-- Link do Bootstrap 5 via CDN -->
     <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- Bootstrap Icons para o ícone de coração/curtida -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
     <style>
-        /* Estilização personalizada com CSS Gradient */
+        /* Paleta de Cores Verde em Gradient */
         .hero-gradient {
-            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            background: linear-gradient(135deg, #0a1f1c 0%, #14342b 50%, #225a4a 100%);
             color: #ffffff;
         }
-        .card-img-top {
-            height: 250px;
-            object-fit: cover;
-        }
         .btn-gradient {
-            background: linear-gradient(90deg, #203a43 0%, #2c5364 100%);
+            background: linear-gradient(90deg, #14342b 0%, #225a4a 100%);
             color: white;
             border: none;
             transition: opacity 0.3s;
@@ -26,6 +24,24 @@
             color: white;
             opacity: 0.9;
         }
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+        .text-verde {
+            color: #225a4a;
+        }
+        /* Botão de curtir customizado */
+        .btn-like {
+            color: #dc3545;
+            border: 1px solid #dc3545;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .btn-like.liked {
+            background: #dc3545;
+            color: white;
+        }
     </style>
 </head>
 <body class="bg-light">
@@ -33,7 +49,7 @@
     <!-- Barra de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold tracking-wide" href="#">SCENTMAN</a>
+            <a class="navbar-brand fw-bold text-uppercase tracking-wide" href="#">Kaua Johari</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,46 +57,53 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Resenhas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Categorias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Fragrâncias Verdes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Seção Hero com CSS Gradient -->
+    <!-- Seção Hero com CSS Gradient Verde -->
     <header class="hero-gradient py-5 text-center text-md-start">
         <div class="container">
             <div class="row align-items-center py-4">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <h1 class="display-4 fw-bold mb-3">Descubra sua Assinatura Olfativa</h1>
-                    <p class="lead text-white-50">Dicas, resenhas completas e tudo o que você precisa saber sobre o universo da perfumaria masculina global.</p>
-                    <a href="#posts" class="btn btn-light btn-lg mt-3 fw-semibold">Ler o Blog</a>
+                    <h1 class="display-4 fw-bold mb-3">Kaua Johari</h1>
+                    <p class="lead text-white-50">Explorando a sofisticação das notas herbais, amadeiradas e o melhor da perfumaria masculina de luxo mundial.</p>
+                    <a href="#posts" class="btn btn-light btn-lg mt-3 fw-semibold text-verde">Ver Artigos</a>
                 </div>
                 <div class="col-md-6 text-center">
-                    <!-- Imagem de Perfume Masculino de alta qualidade -->
+                    <!-- Imagem conceitual de perfume em tom esverdeado/luxo -->
                     <img src="https://unsplash.com" 
-                         alt="Frasco de perfume masculino sofisticado" 
-                         class="img-fluid rounded shadow-lg row-img" style="max-height: 350px;">
+                         alt="Frasco de perfume luxuoso Kaua Johari" 
+                         class="img-fluid rounded shadow-lg" style="max-height: 350px;">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Conteúdo Principal / Feed do Blog -->
+    <!-- Feed do Blog -->
     <main class="container my-5" id="posts">
-        <h2 class="text-center fw-bold mb-5 position-relative">Últimas do Blog</h2>
+        <h2 class="text-center fw-bold mb-5 text-verde">Artigos em Destaque</h2>
         
         <div class="row g-4">
             <!-- Post 1 -->
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://unsplash.com" class="card-img-top" alt="Perfumes Amadeirados">
+                    <img src="https://unsplash.com" class="card-img-top" alt="Notas Verdes">
                     <div class="card-body d-flex flex-column">
-                        <span class="badge bg-secondary mb-2 align-self-start">Tendências</span>
-                        <h5 class="card-title fw-bold">Os 5 Melhores Amadeirados para o Inverno</h5>
-                        <p class="card-text text-muted flex-grow-1">Descubra quais fragrâncias combinam mais com as noites frias e deixam um rastro marcante e elegante por onde passa.</p>
-                        <a href="#" class="btn btn-gradient mt-3">Continuar Lendo</a>
+                        <span class="badge bg-success mb-2 align-self-start">Notas Olfativas</span>
+                        <h5 class="card-title fw-bold">O Poder das Fragrâncias Fougère e Verdes</h5>
+                        <p class="card-text text-muted flex-grow-1">Descubra como o vetiver, o gálbano e a hortelã trazem frescor e imponência indescritíveis para o homem moderno.</p>
+                        
+                        <!-- Área de Interação (Likes) -->
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <a href="#" class="btn btn-gradient btn-sm">Ler Mais</a>
+                            <button class="btn btn-sm btn-like rounded-pill" onclick="toggleLike(this, 42)">
+                                <i class="bi bi-heart-fill me-1"></i> <span class="like-count">42</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,12 +111,19 @@
             <!-- Post 2 -->
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://unsplash.com" class="card-img-top" alt="Perfume para Trabalho">
+                    <img src="https://unsplash.com" class="card-img-top" alt="Perfumes Assinatura">
                     <div class="card-body d-flex flex-column">
-                        <span class="badge bg-secondary mb-2 align-self-start">Guia de Estilo</span>
-                        <h5 class="card-title fw-bold">Como Escolher o Perfume Certo para o Trabalho</h5>
-                        <p class="card-text text-muted flex-grow-1">Equilíbrio é tudo no ambiente corporativo. Veja as notas ideais para transmitir profissionalismo sem incomodar.</p>
-                        <a href="#" class="btn btn-gradient mt-3">Continuar Lendo</a>
+                        <span class="badge bg-success mb-2 align-self-start">Exclusivo</span>
+                        <h5 class="card-title fw-bold">Top 3 Perfumes Importados que Valem Cada Centavo</h5>
+                        <p class="card-text text-muted flex-grow-1">Selecionamos fragrâncias de nicho impecáveis para você construir uma identidade marcante onde quer que vá.</p>
+                        
+                        <!-- Área de Interação (Likes) -->
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <a href="#" class="btn btn-gradient btn-sm">Ler Mais</a>
+                            <button class="btn btn-sm btn-like rounded-pill" onclick="toggleLike(this, 128)">
+                                <i class="bi bi-heart-fill me-1"></i> <span class="like-count">128</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,12 +131,19 @@
             <!-- Post 3 -->
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://unsplash.com" class="card-img-top" alt="Fixação do perfume">
+                    <img src="https://unsplash.com" class="card-img-top" alt="Evolução do perfume">
                     <div class="card-body d-flex flex-column">
-                        <span class="badge bg-secondary mb-2 align-self-start">Dicas Técnicas</span>
-                        <h5 class="card-title fw-bold">O Segredo Infalível para Fazer o Perfume Durar Mais</h5>
-                        <p class="card-text text-muted flex-grow-1">A hidratação da pele e os pontos de pulsação certos mudam totalmente a performance da sua fragrância favorita.</p>
-                        <a href="#" class="btn btn-gradient mt-3">Continuar Lendo</a>
+                        <span class="badge bg-success mb-2 align-self-start">Dicas do Kaua</span>
+                        <h5 class="card-title fw-bold">Projeção vs Fixação: Você Sabe a Diferença?</h5>
+                        <p class="card-text text-muted flex-grow-1">Entenda de uma vez por todas a química por trás da evolução do perfume na pele e evite erros comuns na compra.</p>
+                        
+                        <!-- Área de Interação (Likes) -->
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                            <a href="#" class="btn btn-gradient btn-sm">Ler Mais</a>
+                            <button class="btn btn-sm btn-like rounded-pill" onclick="toggleLike(this, 85)">
+                                <i class="bi bi-heart-fill me-1"></i> <span class="like-count">85</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -116,12 +153,29 @@
     <!-- Rodapé -->
     <footer class="bg-dark text-white-50 text-center py-4 mt-5 border-top border-secondary">
         <div class="container">
-            <p class="mb-1">&copy; 2026 ScentMan Blog. Todos os direitos reservados.</p>
-            <small>Desenvolvido com Bootstrap 5 & CSS Gradients</small>
+            <p class="mb-1">&copy; 2026 Kaua Johari. Todos os direitos reservados.</p>
+            <small>Estilo Verde Herbal & Sofisticação</small>
         </div>
     </footer>
 
-    <!-- Script do Bootstrap (Necessário para menus responsivos e interações) -->
+    <!-- JavaScript para a lógica de Curtidas (Likes) -->
+    <script>
+        function toggleLike(button, initialCount) {
+            const countElement = button.querySelector('.like-count');
+            
+            if (button.classList.contains('liked')) {
+                // Remove a curtida
+                button.classList.remove('liked');
+                countElement.textContent = initialCount;
+            } else {
+                // Adiciona a curtida
+                button.classList.add('liked');
+                countElement.textContent = initialCount + 1;
+            }
+        }
+    </script>
+
+    <!-- Script do Bootstrap -->
     <script src="https://jsdelivr.net"></script>
 </body>
 </html>
