@@ -1,181 +1,1054 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaua Johari | Perfumaria Masculina</title>
-    <!-- Link do Bootstrap 5 via CDN -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    <!-- Bootstrap Icons para o ícone de coração/curtida -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    <style>
-        /* Paleta de Cores Verde em Gradient */
-        .hero-gradient {
-            background: linear-gradient(135deg, #0a1f1c 0%, #14342b 50%, #225a4a 100%);
-            color: #ffffff;
-        }
-        .btn-gradient {
-            background: linear-gradient(90deg, #14342b 0%, #225a4a 100%);
-            color: white;
-            border: none;
-            transition: opacity 0.3s;
-        }
-        .btn-gradient:hover {
-            color: white;
-            opacity: 0.9;
-        }
-        .card-img-top {
-            height: 250px;
-            object-fit: cover;
-        }
-        .text-verde {
-            color: #225a4a;
-        }
-        /* Botão de curtir customizado */
-        .btn-like {
-            color: #dc3545;
-            border: 1px solid #dc3545;
-            background: transparent;
-            transition: all 0.3s ease;
-        }
-        .btn-like.liked {
-            background: #dc3545;
-            color: white;
-        }
-    </style>
-</head>
-<body class="bg-light">
+    <title>L'Essence Mâle | O Guia Definitive da Perfumaria Masculina</title>
 
-    <!-- Barra de Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-uppercase tracking-wide" href="#">Kaua Johari</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Resenhas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Fragrâncias Verdes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Seção Hero com CSS Gradient Verde -->
-    <header class="hero-gradient py-5 text-center text-md-start">
-        <div class="container">
-            <div class="row align-items-center py-4">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <h1 class="display-4 fw-bold mb-3">Kaua Johari</h1>
-                    <p class="lead text-white-50">Explorando a sofisticação das notas herbais, amadeiradas e o melhor da perfumaria masculina de luxo mundial.</p>
-                    <a href="#posts" class="btn btn-light btn-lg mt-3 fw-semibold text-verde">Ver Artigos</a>
-                </div>
-                <div class="col-md-6 text-center">
-                    <!-- Imagem conceitual de perfume em tom esverdeado/luxo -->
-                    <img src="https://unsplash.com" 
-                         alt="Frasco de perfume luxuoso Kaua Johari" 
-                         class="img-fluid rounded shadow-lg" style="max-height: 350px;">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Feed do Blog -->
-    <main class="container my-5" id="posts">
-        <h2 class="text-center fw-bold mb-5 text-verde">Artigos em Destaque</h2>
-        
-        <div class="row g-4">
-            <!-- Post 1 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="https://unsplash.com" class="card-img-top" alt="Notas Verdes">
-                    <div class="card-body d-flex flex-column">
-                        <span class="badge bg-success mb-2 align-self-start">Notas Olfativas</span>
-                        <h5 class="card-title fw-bold">O Poder das Fragrâncias Fougère e Verdes</h5>
-                        <p class="card-text text-muted flex-grow-1">Descubra como o vetiver, o gálbano e a hortelã trazem frescor e imponência indescritíveis para o homem moderno.</p>
-                        
-                        <!-- Área de Interação (Likes) -->
-                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                            <a href="#" class="btn btn-gradient btn-sm">Ler Mais</a>
-                            <button class="btn btn-sm btn-like rounded-pill" onclick="toggleLike(this, 42)">
-                                <i class="bi bi-heart-fill me-1"></i> <span class="like-count">42</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Post 2 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="https://unsplash.com" class="card-img-top" alt="Perfumes Assinatura">
-                    <div class="card-body d-flex flex-column">
-                        <span class="badge bg-success mb-2 align-self-start">Exclusivo</span>
-                        <h5 class="card-title fw-bold">Top 3 Perfumes Importados que Valem Cada Centavo</h5>
-                        <p class="card-text text-muted flex-grow-1">Selecionamos fragrâncias de nicho impecáveis para você construir uma identidade marcante onde quer que vá.</p>
-                        
-                        <!-- Área de Interação (Likes) -->
-                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                            <a href="#" class="btn btn-gradient btn-sm">Ler Mais</a>
-                            <button class="btn btn-sm btn-like rounded-pill" onclick="toggleLike(this, 128)">
-                                <i class="bi bi-heart-fill me-1"></i> <span class="like-count">128</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Post 3 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="https://unsplash.com" class="card-img-top" alt="Evolução do perfume">
-                    <div class="card-body d-flex flex-column">
-                        <span class="badge bg-success mb-2 align-self-start">Dicas do Kaua</span>
-                        <h5 class="card-title fw-bold">Projeção vs Fixação: Você Sabe a Diferença?</h5>
-                        <p class="card-text text-muted flex-grow-1">Entenda de uma vez por todas a química por trás da evolução do perfume na pele e evite erros comuns na compra.</p>
-                        
-                        <!-- Área de Interação (Likes) -->
-                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                            <a href="#" class="btn btn-gradient btn-sm">Ler Mais</a>
-                            <button class="btn btn-sm btn-like rounded-pill" onclick="toggleLike(this, 85)">
-                                <i class="bi bi-heart-fill me-1"></i> <span class="like-count">85</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Rodapé -->
-    <footer class="bg-dark text-white-50 text-center py-4 mt-5 border-top border-secondary">
-        <div class="container">
-            <p class="mb-1">&copy; 2026 Kaua Johari. Todos os direitos reservados.</p>
-            <small>Estilo Verde Herbal & Sofisticação</small>
-        </div>
-    </footer>
-
-    <!-- JavaScript para a lógica de Curtidas (Likes) -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        function toggleLike(button, initialCount) {
-            const countElement = button.querySelector('.like-count');
-            
-            if (button.classList.contains('liked')) {
-                // Remove a curtida
-                button.classList.remove('liked');
-                countElement.textContent = initialCount;
-            } else {
-                // Adiciona a curtida
-                button.classList.add('liked');
-                countElement.textContent = initialCount + 1;
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#FFF5D6',
+                            300: '#F3D382',
+                            400: '#E6BE61',
+                            500: '#D4AF37',
+                            600: '#AA8520',
+                            700: '#806111',
+                        },
+                        obsidian: '#0B0C10',
+                        charcoal: '#12141A',
+                        cardbg: 'rgba(25, 28, 36, 0.75)',
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
             }
         }
     </script>
 
-    <!-- Script do Bootstrap -->
-    <script src="https://jsdelivr.net"></script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0B0C10;
+            color: #E2E8F0;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Glassmorphism custom styling */
+        .glass-panel {
+            background: rgba(20, 23, 31, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-modal {
+            background: rgba(13, 15, 20, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF5D6 0%, #D4AF37 50%, #AA8520 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-glow:hover {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0C10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2E3D;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-300 selection:bg-gold-500 selection:text-obsidian overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 glass-panel border-b border-gold-500/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-gold-500/50 flex items-center justify-center bg-obsidian group-hover:border-gold-400 transition-colors">
+                    <i class="fa-solid fa-gem text-gold-500 text-lg group-hover:scale-110 transition-transform"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-xl tracking-widest text-white font-bold group-hover:text-gold-400 transition-colors">L'ESSENCE MÂLE</span>
+                    <span class="text-[9px] tracking-[0.3em] text-gold-500 uppercase -mt-1">Haute Parfumerie</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest font-semibold uppercase">
+                <a href="#home" class="hover:text-gold-400 transition-colors text-white">Início</a>
+                <a href="#catalogo" class="hover:text-gold-400 transition-colors text-slate-300">Coleção & Reviews</a>
+                <a href="#quiz" class="hover:text-gold-400 transition-colors text-slate-300">Quiz Olfativo</a>
+                <a href="#piramide" class="hover:text-gold-400 transition-colors text-slate-300">Guia Olfativo</a>
+                <a href="#artigos" class="hover:text-gold-400 transition-colors text-slate-300">Artigos</a>
+            </nav>
+
+            <!-- Actions & Search -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="Buscar perfume ou nota..." 
+                        class="bg-charcoal/80 border border-gold-500/20 rounded-full py-1.5 pl-9 pr-4 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 w-44 focus:w-60 transition-all duration-300">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-gold-500/60"></i>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" class="md:hidden text-gold-500 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden glass-panel border-b border-gold-500/20 px-6 py-6 space-y-4 text-sm font-semibold tracking-wider uppercase">
+            <a href="#home" class="block text-gold-400 mobile-link">Início</a>
+            <a href="#catalogo" class="block hover:text-gold-400 mobile-link">Coleção & Reviews</a>
+            <a href="#quiz" class="block hover:text-gold-400 mobile-link">Quiz Olfativo</a>
+            <a href="#piramide" class="block hover:text-gold-400 mobile-link">Guia Olfativo</a>
+            <a href="#artigos" class="block hover:text-gold-400 mobile-link">Artigos</a>
+            <div class="pt-2">
+                <input type="text" id="searchInputMobile" placeholder="Buscar no site..." 
+                    class="w-full bg-charcoal border border-gold-500/30 rounded-full py-2 px-4 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-gold-500">
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1920&auto=format&fit=crop" 
+                alt="Perfume Masculino Luxo" class="w-full h-full object-cover opacity-25 scale-105 transform hover:scale-100 transition-transform duration-10000">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-obsidian via-transparent to-obsidian"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-gold-500/30 mb-8 animate-pulse">
+                <i class="fa-solid fa-crown text-gold-400 text-xs"></i>
+                <span class="text-xs uppercase tracking-widest text-gold-300 font-semibold">O Universo da Perfumaria Masculina de Elite</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                A Arte de Deixar uma <br><span class="gold-gradient-text">Marca Inesquecível</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 mb-10 font-light leading-relaxed">
+                Descubra análises minuciosas, resenhas exclusivas de perfumaria designer e nicho, e encontre a fragrância perfeita para expressar sua presença e estilo singular.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#quiz" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-600 via-gold-500 to-gold-400 text-obsidian font-bold text-xs uppercase tracking-widest hover:brightness-110 transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-gold-500/20 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-compass"></i> Descubra Seu Perfume Assinatura
+                </a>
+                <a href="#catalogo" class="w-full sm:w-auto px-8 py-4 rounded-full glass-panel border border-gold-500/40 text-gold-300 font-bold text-xs uppercase tracking-widest hover:bg-gold-500/10 hover:border-gold-400 transition-all duration-300 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-spray-can"></i> Explorar Catálogo
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-gold-500/15 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <span class="block font-serif text-2xl sm:text-3xl font-bold text-white">150+</span>
+                    <span class="text-[11px] uppercase tracking-widest text-slate-400">Perfumes Resenhados</span>
+                </div>
+                <div class="text-center">
+                    <span class="block font-serif text-2xl sm:text-3xl font-bold text-gold-400">5</span>
+                    <span class="text-[11px] uppercase tracking-widest text-slate-400">Famílias Olfativas</span>
+                </div>
+                <div class="text-center">
+                    <span class="block font-serif text-2xl sm:text-3xl font-bold text-white">98%</span>
+                    <span class="text-[11px] uppercase tracking-widest text-slate-400">Precisão no Quiz</span>
+                </div>
+                <div class="text-center">
+                    <span class="block font-serif text-2xl sm:text-3xl font-bold text-gold-400">Nicho & Designer</span>
+                    <span class="text-[11px] uppercase tracking-widest text-slate-400">Curadoria Exclusiva</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOGO & REVIEWS SECTION -->
+    <section id="catalogo" class="py-24 relative bg-charcoal/40 border-t border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold tracking-[0.3em] text-gold-500 uppercase block mb-2">Curadoria & Avaliações</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">Catálogo de Perfumes Mâle</h2>
+                <div class="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
+                <p class="text-slate-400 text-sm">Filtre por família olfativa ou ocasião ideal para encontrar a resenha detalhada com fixação, projeção e notas.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12" id="filterContainer">
+                <button data-filter="all" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-gold-500 text-obsidian shadow-md">
+                    Todos
+                </button>
+                <button data-filter="Amadeirado" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 glass-panel border border-gold-500/20 hover:border-gold-500 text-slate-300">
+                    <i class="fa-solid fa-tree mr-1.5 text-gold-500"></i> Amadeirados
+                </button>
+                <button data-filter="Oriental/Especiado" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 glass-panel border border-gold-500/20 hover:border-gold-500 text-slate-300">
+                    <i class="fa-solid fa-pepper-hot mr-1.5 text-gold-500"></i> Oriental / Especiado
+                </button>
+                <button data-filter="Cítrico/Aquático" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 glass-panel border border-gold-500/20 hover:border-gold-500 text-slate-300">
+                    <i class="fa-solid fa-water mr-1.5 text-gold-500"></i> Cítrico / Aquático
+                </button>
+                <button data-filter="Gourmand" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 glass-panel border border-gold-500/20 hover:border-gold-500 text-slate-300">
+                    <i class="fa-solid fa-cookie-bite mr-1.5 text-gold-500"></i> Gourmand
+                </button>
+                <button data-filter="Fougère/Aromático" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 glass-panel border border-gold-500/20 hover:border-gold-500 text-slate-300">
+                    <i class="fa-solid fa-leaf mr-1.5 text-gold-500"></i> Fougère / Aromático
+                </button>
+            </div>
+
+            <!-- Perfume Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="perfumeGrid">
+                <!-- Injetado via Javascript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIZ INTERATIVO SECTION -->
+    <section id="quiz" class="py-24 relative overflow-hidden bg-obsidian">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-gold-500/30 text-center shadow-2xl">
+                
+                <div class="inline-block p-3 rounded-full bg-gold-500/10 border border-gold-500/30 mb-4">
+                    <i class="fa-solid fa-wand-magic-sparkles text-gold-400 text-2xl"></i>
+                </div>
+                
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-3">Descubra Sua Assinatura Olfativa</h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto mb-8">Responda a 3 perguntas rápidas sobre seu estilo de vida e ocasião preferida para receber nossa recomendação personalizada.</p>
+
+                <!-- Quiz Container -->
+                <div id="quizContainer" class="text-left bg-charcoal/80 p-6 sm:p-8 rounded-2xl border border-gold-500/10 min-h-[320px] flex flex-col justify-between">
+                    
+                    <!-- Progress Bar -->
+                    <div class="mb-6">
+                        <div class="flex justify-between text-xs text-gold-400 font-semibold mb-2">
+                            <span id="quizStepText">Etapa 1 de 3</span>
+                            <span id="quizPercent">33%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                            <div id="quizProgressBar" class="bg-gold-500 h-full w-1/3 transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                    <!-- Question Content Dynamic -->
+                    <div id="quizContent" class="my-auto">
+                        <!-- Injetado dinamicamente via JS -->
+                    </div>
+
+                    <!-- Footer Controls -->
+                    <div class="flex justify-between items-center mt-8 pt-4 border-t border-slate-800">
+                        <button id="quizPrevBtn" class="px-5 py-2 rounded-full text-xs font-semibold text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors" disabled>
+                            <i class="fa-solid fa-arrow-left mr-1"></i> Anterior
+                        </button>
+                        <span class="text-[11px] text-slate-500 italic">Selecione uma opção para continuar</span>
+                    </div>
+                </div>
+
+                <!-- Quiz Result Box (Hidden by default) -->
+                <div id="quizResult" class="hidden text-center py-6">
+                    <div class="text-gold-400 text-4xl mb-3"><i class="fa-solid fa-circle-check"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-2">Seu Perfume Ideal É:</h3>
+                    <div id="quizMatchCard" class="mt-6 max-w-md mx-auto">
+                        <!-- Card do resultado gerado via JS -->
+                    </div>
+                    <button id="resetQuizBtn" class="mt-8 px-6 py-3 rounded-full bg-gold-500 text-obsidian font-bold text-xs uppercase tracking-wider hover:bg-gold-400 transition-colors">
+                        Refazer Quiz
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GUIA PIRÂMIDE OLFATIVA SECTION -->
+    <section id="piramide" class="py-24 relative bg-charcoal/30 border-t border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold tracking-[0.3em] text-gold-500 uppercase block mb-2">Conhecimento Fundamental</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">A Pirâmide Olfativa Explicada</h2>
+                <div class="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
+                <p class="text-slate-400 text-sm">Entenda como uma fragrância evolui na sua pele ao longo das horas através de suas três fases essenciais.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Pyramid Visual Diagram -->
+                <div class="lg:col-span-5 flex flex-col items-center gap-3">
+                    <!-- Top Notes Tier -->
+                    <div class="pyramid-step w-full max-w-[280px] p-4 rounded-t-2xl glass-panel border-t-2 border-gold-400 text-center cursor-pointer hover:bg-gold-500/10 transition-all duration-300 active-pyramid" data-step="topo">
+                        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold block">Notas de Topo / Saída</span>
+                        <span class="text-[11px] text-slate-400">Primeiros 5 a 15 minutos</span>
+                    </div>
+                    <!-- Heart Notes Tier -->
+                    <div class="pyramid-step w-full max-w-[360px] p-5 glass-panel border-t-2 border-gold-500 text-center cursor-pointer hover:bg-gold-500/10 transition-all duration-300" data-step="coracao">
+                        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold block">Notas de Coração / Corpo</span>
+                        <span class="text-[11px] text-slate-400">2 a 4 horas de duração</span>
+                    </div>
+                    <!-- Base Notes Tier -->
+                    <div class="pyramid-step w-full max-w-[440px] p-6 rounded-b-2xl glass-panel border-t-2 border-gold-600 text-center cursor-pointer hover:bg-gold-500/10 transition-all duration-300" data-step="fundo">
+                        <span class="text-xs uppercase tracking-widest text-gold-400 font-bold block">Notas de Fundo / Base</span>
+                        <span class="text-[11px] text-slate-400">6 a 12+ horas de rastro</span>
+                    </div>
+                </div>
+
+                <!-- Pyramid Dynamic Details -->
+                <div class="lg:col-span-7 glass-panel p-8 rounded-2xl border border-gold-500/20" id="pyramidDetails">
+                    <div id="step-topo-detail" class="pyramid-detail-content">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-3 bg-gold-500/10 rounded-xl text-gold-400">
+                                <i class="fa-solid fa-bolt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-white">Notas de Saída (Topo)</h3>
+                                <span class="text-xs text-gold-400 font-medium">A primeira impressão sensorial</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            São as notas mais voláteis da composição. Percebidas imediatamente após dar a borrifada, elas duram apenas alguns minutos e têm o papel crucial de causar o primeiro impacto do perfume.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 bg-obsidian/60 p-4 rounded-xl border border-gold-500/10">
+                            <div>
+                                <span class="text-xs font-semibold text-gold-300 uppercase block mb-1">Ingredientes Comuns:</span>
+                                <p class="text-xs text-slate-400">Limão Siciliano, Bergamota, Hortelã, Pimenta Rosa, Cardamomo, Notas Aquáticas.</p>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-gold-300 uppercase block mb-1">Dica de Especialista:</span>
+                                <p class="text-xs text-slate-400">Nunca decida a compra de um perfume nos primeiros 3 minutos na loja!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="step-coracao-detail" class="pyramid-detail-content hidden">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-3 bg-gold-500/10 rounded-xl text-gold-400">
+                                <i class="fa-solid fa-heart text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-white">Notas de Coração (Corpo)</h3>
+                                <span class="text-xs text-gold-400 font-medium">A verdadeira identidade e tema</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Emerged à medida que as notas de topo evaporam. Constituem a alma do perfume, determinando a família olfativa principal e criando o rastro marcante durante o meio do dia.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 bg-obsidian/60 p-4 rounded-xl border border-gold-500/10">
+                            <div>
+                                <span class="text-xs font-semibold text-gold-300 uppercase block mb-1">Ingredientes Comuns:</span>
+                                <p class="text-xs text-slate-400">Lavanda, Íris, Canela, Noz-Moscada, Gerânio, Salvia Sclarea, Cacau.</p>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-gold-300 uppercase block mb-1">Dica de Especialista:</span>
+                                <p class="text-xs text-slate-400">É aqui que você avalia o coração elegante do perfume durante o encontro ou reunião.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="step-fundo-detail" class="pyramid-detail-content hidden">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-3 bg-gold-500/10 rounded-xl text-gold-400">
+                                <i class="fa-solid fa-anchor text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-white">Notas de Fundo (Base)</h3>
+                                <span class="text-xs text-gold-400 font-medium">A sustentação e a máxima fixação</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Formadas por moléculas mais pesadas e ricas. São elas que fixam na pele e na roupa por longas horas, deixando a memória olfativa do ambiente depois que você sai.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 bg-obsidian/60 p-4 rounded-xl border border-gold-500/10">
+                            <div>
+                                <span class="text-xs font-semibold text-gold-300 uppercase block mb-1">Ingredientes Comuns:</span>
+                                <p class="text-xs text-slate-400">Oud, Âmbar, Fava Tonka, Madeira de Sândalo, Vetiver, Baunilha, Couro.</p>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold text-gold-300 uppercase block mb-1">Dica de Especialista:</span>
+                                <p class="text-xs text-slate-400">Perfumes amadeirados e orientais possuem bases mais intensas e duradouras.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG / ARTICLES SECTION -->
+    <section id="artigos" class="py-24 relative bg-obsidian">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs font-semibold tracking-[0.3em] text-gold-500 uppercase block mb-2">Dicas & Editorial</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Artigos do Blog</h2>
+                    <div class="w-16 h-0.5 bg-gold-500 mt-4"></div>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0">
+                    Aprofunde seus conhecimentos sobre etiqueta perfumada, técnicas de aplicação e bastidores da alta perfumaria.
+                </p>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="articlesGrid">
+                <!-- Injetado via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFUME DETAIL MODAL -->
+    <div id="perfumeModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="glass-modal max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-3xl border border-gold-500/30 p-6 sm:p-8 relative">
+            <button id="closePerfumeModal" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-obsidian border border-gold-500/30 text-gold-400 hover:text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="perfumeModalContent">
+                <!-- Conteúdo do Modal Injetado via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ARTICLE READING MODAL -->
+    <div id="articleModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="glass-modal max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-3xl border border-gold-500/30 p-6 sm:p-8 relative">
+            <button id="closeArticleModal" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-obsidian border border-gold-500/30 text-gold-400 hover:text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="articleModalContent">
+                <!-- Conteúdo do Artigo Injetado via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-charcoal border-t border-gold-500/20 pt-16 pb-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-gold-500/10">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-5">
+                    <a href="#" class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-full border border-gold-500/50 flex items-center justify-center bg-obsidian">
+                            <i class="fa-solid fa-gem text-gold-500 text-sm"></i>
+                        </div>
+                        <span class="font-serif text-lg tracking-widest text-white font-bold">L'ESSENCE MÂLE</span>
+                    </a>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-6 max-w-sm">
+                        O portal definitivo para o homem moderno que busca excelência olfativa, elegância autêntica e domínio das melhores fragrâncias do mundo.
+                    </p>
+                    <div class="flex space-x-4 text-gold-400">
+                        <a href="#" class="w-9 h-9 rounded-full glass-panel border border-gold-500/20 flex items-center justify-center hover:bg-gold-500 hover:text-obsidian transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full glass-panel border border-gold-500/20 flex items-center justify-center hover:bg-gold-500 hover:text-obsidian transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full glass-panel border border-gold-500/20 flex items-center justify-center hover:bg-gold-500 hover:text-obsidian transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="md:col-span-3">
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4 text-gold-400">Navegação</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#home" class="hover:text-gold-300 transition-colors">Início</a></li>
+                        <li><a href="#catalogo" class="hover:text-gold-300 transition-colors">Catálogo de Perfumes</a></li>
+                        <li><a href="#quiz" class="hover:text-gold-300 transition-colors">Quiz de Assinatura</a></li>
+                        <li><a href="#piramide" class="hover:text-gold-300 transition-colors">Pirâmide Olfativa</a></li>
+                        <li><a href="#artigos" class="hover:text-gold-300 transition-colors">Artigos do Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Form -->
+                <div class="md:col-span-4">
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-2 text-gold-400">Clube Exclusivo</h4>
+                    <p class="text-xs text-slate-400 mb-4">Receba resenhas em primeira mão e convites para lançamentos de perfumaria fina.</p>
+                    <form id="newsletterForm" class="space-y-2">
+                        <input type="email" placeholder="Seu melhor e-mail profissional" required
+                            class="w-full bg-obsidian border border-gold-500/20 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-gold-500">
+                        <button type="submit" class="w-full py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-obsidian font-bold text-xs uppercase tracking-wider transition-colors">
+                            Inscrever-se na Newsletter
+                        </button>
+                    </form>
+                    <div id="newsletterSuccess" class="hidden text-xs text-emerald-400 mt-2">
+                        <i class="fa-solid fa-check-circle mr-1"></i> Cadastro realizado com sucesso!
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500">
+                <p>&copy; 2026 L'Essence Mâle. Todos os direitos reservados. Design Luxo & Performance.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-slate-400">Termos de Uso</a>
+                    <a href="#" class="hover:text-slate-400">Privacidade</a>
+                    <a href="#" class="hover:text-slate-400">Contato Editorial</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // DATA BASE: PERFUMES
+        const perfumesData = [
+            {
+                id: 1,
+                name: "Bleu de Chanel Parfum",
+                brand: "Chanel",
+                type: "Amadeirado",
+                image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600&auto=format&fit=crop",
+                rating: 4.9,
+                ocasiao: "Trabalho / Eventos Noturnos",
+                estacao: "Versátil",
+                fixacao: "10-12 Horas",
+                projecao: "Marcante (2h)",
+                topo: "Casca de Limão, Bergamota, Hortelã, Artemísia",
+                coracao: "Lavanda, Abacaxi, Gerânio, Notas Verdes",
+                fundo: "Sândalo da Nova Caledônia, Cedro, Âmbar, Fava Tonka",
+                descricao: "O ápice do sofisticação masculina versátil. Uma fragrância intensa e profunda, domina o frescor cítrico inicial e evolui para um sândalo cremoso que exala autoridade discreta e elegância sem esforço."
+            },
+            {
+                id: 2,
+                name: "Tom Ford Tobacco Vanille",
+                brand: "Tom Ford",
+                type: "Oriental/Especiado",
+                image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop",
+                rating: 4.95,
+                ocasiao: "Encontro / Inverno / Eventos Chique",
+                estacao: "Outono / Inverno",
+                fixacao: "12+ Horas",
+                projecao: "Envolvente e Potente",
+                topo: "Folhas de Tabaco, Especiarias Aromáticas",
+                coracao: "Fava Tonka, Flor de Tabaco, Baunilha, Cacau",
+                fundo: "Frutas Secas, Notas Amadeiradas Nobres",
+                descricao: "Uma obra-prima da perfumaria de nicho. Opulente, aquecida e intensamente sedutora. Lembra o ambiente de um clube exclusivo londrino com nuances de charuto fino e baunilha licorosa."
+            },
+            {
+                id: 3,
+                name: "Acqua di Giò Profondo",
+                brand: "Giorgio Armani",
+                type: "Cítrico/Aquático",
+                image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?q=80&w=600&auto=format&fit=crop",
+                rating: 4.7,
+                ocasiao: "Dia a Dia / Verão / Trabalho",
+                estacao: "Verão / Primavera",
+                fixacao: "7-8 Horas",
+                projecao: "Moderada e Refrescante",
+                topo: "Notas Marinhas, Bergamota Verde, Mandarina",
+                coracao: "Alecrim, Lavanda, Cipreste, Lentisco",
+                fundo: "Âmbar Mineral, Patchouli, Almíscar",
+                descricao: "Uma interpretação moderna e misteriosa do clássico marinho. Captura a sensação de um mergulho nas profundezas do oceano com ervas aromáticas refinadas."
+            },
+            {
+                id: 4,
+                name: "Dior Homme Intense",
+                brand: "Dior",
+                type: "Amadeirado",
+                image: "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=600&auto=format&fit=crop",
+                rating: 4.9,
+                ocasiao: "Encontro Romântico / Formal Noturno",
+                estacao: "Clima Frio",
+                fixacao: "10+ Horas",
+                projecao: "Elegante e Intimista",
+                topo: "Lavanda da Toscana",
+                coracao: "Íris Nobre, Ambreta, Pêra",
+                fundo: "Cedro da Virgínia, Vetiver",
+                descricao: "Famoso por sua nota de íris extremamente elegante com aspecto atalcado e amadeirado. Considerado um dos perfumes mais sedutores e sofisticados já criados para o público masculino."
+            },
+            {
+                id: 5,
+                name: "Spicebomb Extreme",
+                brand: "Viktor&Rolf",
+                type: "Gourmand",
+                image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600&auto=format&fit=crop",
+                rating: 4.85,
+                ocasiao: "Balada / Noite / Encontro",
+                estacao: "Outono / Inverno",
+                fixacao: "11-13 Horas",
+                projecao: "Altíssima",
+                topo: "Pimenta Preta, Bergamota",
+                coracao: "Canela, Crivo, Cominho",
+                fundo: "Baunilha Negra, Tabaco, Âmbar",
+                descricao: "Uma explosão sensual e quente. Combina pimenta escaldante, canela reconfortante e uma baunilha cremosa viciante que rende elogios imediatos em noites frias."
+            },
+            {
+                id: 6,
+                name: "Yves Saint Laurent Y EDP",
+                brand: "YSL",
+                type: "Fougère/Aromático",
+                image: "https://images.unsplash.com/photo-1615397349754-cfa2066a298e?q=80&w=600&auto=format&fit=crop",
+                rating: 4.8,
+                ocasiao: "Assinatura Diária / Eventos / Casual Luxo",
+                estacao: "Todas as Estações",
+                fixacao: "9-10 Horas",
+                projecao: "Excelente",
+                topo: "Maçã Verde, Gengibre, Bergamota",
+                coracao: "Sálvia, Zimbro, Gerânio",
+                fundo: "Madeira de Âmbar, Fava Tonka, Cedro, Olíbano",
+                descricao: "O perfume assinatura definitivo para o homem jovem e bem-sucedido. Combina a crocância suculenta da maçã verde com a elegância limpa da sálvia e do âmbar."
+            }
+        ];
+
+        // DATA BASE: BLOG ARTICLES
+        const articlesData = [
+            {
+                id: 1,
+                title: "Como Aplicar Perfume para Durar 12 Horas+ sem Exagerar",
+                category: "Guia Prático",
+                readTime: "5 min de leitura",
+                image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=600&auto=format&fit=crop",
+                snippet: "Descubra os pontos pulsantes chave, o segredo da hidratação prévia e o erro fatal de esfregar os pulsos após borrifar.",
+                content: `
+                    <p class="mb-4">Fixação não depende apenas da concentração da fragrância (EDT, EDP ou Parfum). A forma como você prepara a pele e aplica o perfume altera drasticamente a longevidade da projeção.</p>
+                    <h4 class="font-serif text-lg font-bold text-gold-400 mt-6 mb-2">1. A Regra do Hidratante Neutro</h4>
+                    <p class="mb-4">Moléculas de perfume aderem significativamente melhor a peles hidratadas. Aplique um creme neutro (sem cheiro) nos pontos de pulsação antes de borrifar a fragrância.</p>
+                    <h4 class="font-serif text-lg font-bold text-gold-400 mt-6 mb-2">2. Os Pontos Estratégicos</h4>
+                    <p class="mb-4">Concentre as borrifadas nas áreas de maior circulação sanguínea: laterais do pescoço, atrás das orelhas e na dobra dos cotovelos. Para encontros, uma borrifada na nuca garante um rastro inesquecível ao abraçar.</p>
+                    <h4 class="font-serif text-lg font-bold text-gold-400 mt-6 mb-2">3. NUNCA Esfregue os Pulsos</h4>
+                    <p class="mb-4">Esfregar os pulsos gera atrito térmico que quebra as moléculas das delicadas notas de topo (como cítricos e especiarias finas), destruindo a evolução natural planejada pelo perfumista.</p>
+                `
+            },
+            {
+                id: 2,
+                title: "Designer vs Perfumaria de Nicho: Qual Vale o Investimento?",
+                category: "Análise",
+                readTime: "7 min de leitura",
+                image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=600&auto=format&fit=crop",
+                snippet: "Entenda as diferenças brutais entre marcas de alta moda e casas de nicho exclusivas como Creed, Parfums de Marly e Amouage.",
+                content: `
+                    <p class="mb-4">O mercado de fragrâncias masculinas divide-se em dois grandes universos. Enquanto as marcas Designer (Dior, Chanel, YSL) buscam agradar a um público amplo com apelo de massa, a Perfumaria de Nicho foca em exclusividade e ingredientes raros.</p>
+                    <h4 class="font-serif text-lg font-bold text-gold-400 mt-6 mb-2">Perfumaria Designer</h4>
+                    <p class="mb-4">Utiliza testes focados e agradam fácil a 95% das pessoas. Possuem preços mais acessíveis e embalagens icônicas assinadas por grandes grifes de moda.</p>
+                    <h4 class="font-serif text-lg font-bold text-gold-400 mt-6 mb-2">Perfumaria de Nicho</h4>
+                    <p class="mb-4">Casas focadas unicamente em perfumes. Utilizam altas concentrações de óleos essenciais naturais, notas exóticas (como Oud real, Âmbar Cinzento e Vetiver do Haiti) e produções limitadas. Ideal para quem não quer cheirar igual a todos no ambiente.</p>
+                `
+            },
+            {
+                id: 3,
+                title: "Os Melhores Perfumes Masculinos para o Verão Tropical",
+                category: "Seleção da Estação",
+                readTime: "4 min de leitura",
+                image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop",
+                snippet: "Como escolher notas frescas que resistem ao calor sufocante sem ficarem enjoativas ou evaporarem em meia hora.",
+                content: `
+                    <p class="mb-4">No calor intenso do verão brasileiro, perfumes doces ou muito orientais podem sufocar quem está ao seu redor. A chave é buscar fragrâncias com base aquática, cítrica amarga ou herbal aromática.</p>
+                    <h4 class="font-serif text-lg font-bold text-gold-400 mt-6 mb-2">Notas Recomendadas para Dias Quentes</h4>
+                    <ul class="list-disc pl-5 space-y-2 mb-4 text-slate-300">
+                        <li><strong>Bergamota e Limão Siciliano:</strong> Frescor energizante imediato.</li>
+                        <li><strong>Vetiver e Neroli:</strong> Elegância limpa com sensação de banho tomado refinado.</li>
+                        <li><strong>Notas Oceânicas e Sal Marinho:</strong> Nuance mineral refrescante.</li>
+                    </ul>
+                `
+            }
+        ];
+
+        // QUIZ QUESTIONS DATA
+        const quizQuestions = [
+            {
+                question: "Qual é o seu objetivo principal ao usar um perfume?",
+                options: [
+                    { label: "Marcar presença e seduzir em encontros noturnos", type: "Oriental/Especiado" },
+                    { label: "Exalar elegância, autoridade e profissionalismo no trabalho", type: "Amadeirado" },
+                    { label: "Sentir frescor energizante e sensação de limpeza o dia todo", type: "Cítrico/Aquático" },
+                    { label: "Estar pronto para qualquer ocasião casual com um aroma moderno", type: "Fougère/Aromático" }
+                ]
+            },
+            {
+                question: "Qual é a estação do ano ou clima em que você mais utilizará?",
+                options: [
+                    { label: "Dias quentes, praia e verão ensolarado", type: "Cítrico/Aquático" },
+                    { label: "Noites frias, outono e ambientes climatizados", type: "Gourmand" },
+                    { label: "Clima ameno, primavera ou uso diário em escritório", type: "Fougère/Aromático" },
+                    { label: "Eventos formais independente da estação", type: "Amadeirado" }
+                ]
+            },
+            {
+                question: "Qual nota ou aroma mais atrai seus sentidos?",
+                options: [
+                    { label: "Madeiras nobres, sândalo e couro", type: "Amadeirado" },
+                    { label: "Baunilha picante, canela e tabaco", type: "Gourmand" },
+                    { label: "Limão fresco, brisa marinha e menta", type: "Cítrico/Aquático" },
+                    { label: "Lavanda aromática, maçã verde e especiarias", type: "Fougère/Aromático" }
+                ]
+            }
+        ];
+
+        // RENDER PERFUMES
+        function renderPerfumes(filter = 'all', searchQuery = '') {
+            const grid = document.getElementById('perfumeGrid');
+            grid.innerHTML = '';
+
+            const filtered = perfumesData.filter(perfume => {
+                const matchesFilter = filter === 'all' || perfume.type === filter;
+                const matchesSearch = perfume.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                      perfume.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      perfume.type.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      perfume.topo.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesFilter && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12">
+                        <i class="fa-solid fa-bottle-droplet text-gold-500/40 text-4xl mb-3"></i>
+                        <p class="text-slate-400">Nenhum perfume encontrado com estes critérios.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "glass-panel rounded-2xl overflow-hidden border border-gold-500/15 hover:border-gold-500/40 transition-all duration-300 flex flex-col group gold-border-glow";
+                card.innerHTML = `
+                    <div class="relative h-64 overflow-hidden bg-obsidian">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-85">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-obsidian/80 text-gold-400 border border-gold-500/30">
+                            ${p.type}
+                        </span>
+                        <div class="absolute bottom-3 left-3 flex items-center gap-1 bg-obsidian/90 px-2.5 py-1 rounded-md border border-gold-500/20 text-xs">
+                            <i class="fa-solid fa-star text-gold-400"></i>
+                            <span class="text-white font-bold">${p.rating}</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] uppercase tracking-widest text-gold-500 font-semibold">${p.brand}</span>
+                            <h3 class="font-serif text-xl font-bold text-white mb-3 group-hover:text-gold-300 transition-colors">${p.name}</h3>
+                            
+                            <div class="space-y-1.5 text-xs text-slate-300 mb-4 bg-obsidian/40 p-3 rounded-lg border border-gold-500/10">
+                                <div><strong class="text-gold-400">Ocasião:</strong> ${p.ocasiao}</div>
+                                <div><strong class="text-gold-400">Fixação:</strong> ${p.fixacao}</div>
+                            </div>
+                        </div>
+
+                        <button onclick="openPerfumeModal(${p.id})" class="w-full py-2.5 rounded-xl border border-gold-500/30 hover:bg-gold-500 hover:text-obsidian text-gold-300 font-semibold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> Ver Resenha Completa
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // RENDER BLOG ARTICLES
+        function renderArticles() {
+            const grid = document.getElementById('articlesGrid');
+            grid.innerHTML = '';
+
+            articlesData.forEach(art => {
+                const card = document.createElement('article');
+                card.className = "glass-panel rounded-2xl overflow-hidden border border-gold-500/15 hover:border-gold-500/30 transition-all duration-300 flex flex-col group";
+                card.innerHTML = `
+                    <div class="relative h-48 overflow-hidden bg-obsidian">
+                        <img src="${art.image}" alt="${art.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80">
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-wider bg-gold-500 text-obsidian">
+                            ${art.category}
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[11px] text-slate-400 block mb-2"><i class="fa-regular fa-clock mr-1"></i> ${art.readTime}</span>
+                            <h3 class="font-serif text-lg font-bold text-white mb-3 group-hover:text-gold-400 transition-colors leading-snug">${art.title}</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-6">${art.snippet}</p>
+                        </div>
+                        <button onclick="openArticleModal(${art.id})" class="text-xs font-bold text-gold-400 hover:text-gold-300 uppercase tracking-wider flex items-center gap-1">
+                            Ler Artigo Completo <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // MODAL HANDLERS
+        function openPerfumeModal(id) {
+            const p = perfumesData.find(item => item.id === id);
+            if(!p) return;
+
+            const modalContent = document.getElementById('perfumeModalContent');
+            modalContent.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                    <div class="md:col-span-5 rounded-2xl overflow-hidden border border-gold-500/20">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-80 md:h-full object-cover">
+                    </div>
+                    <div class="md:col-span-7">
+                        <span class="text-xs font-bold tracking-widest text-gold-500 uppercase">${p.brand} &bull; ${p.type}</span>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-2">${p.name}</h2>
+                        
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="flex text-gold-400 text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs font-bold text-white">${p.rating} / 5.0</span>
+                        </div>
+
+                        <p class="text-xs text-slate-300 leading-relaxed mb-6">${p.descricao}</p>
+
+                        <!-- Pirâmide das Notas -->
+                        <div class="space-y-2 mb-6 bg-obsidian/80 p-4 rounded-xl border border-gold-500/15 text-xs">
+                            <div class="border-b border-slate-800 pb-1.5">
+                                <strong class="text-gold-400 uppercase tracking-wider block text-[10px]">Notas de Saída (Topo):</strong>
+                                <span class="text-slate-300">${p.topo}</span>
+                            </div>
+                            <div class="border-b border-slate-800 pb-1.5">
+                                <strong class="text-gold-400 uppercase tracking-wider block text-[10px]">Notas de Coração:</strong>
+                                <span class="text-slate-300">${p.coracao}</span>
+                            </div>
+                            <div>
+                                <strong class="text-gold-400 uppercase tracking-wider block text-[10px]">Notas de Fundo (Base):</strong>
+                                <span class="text-slate-300">${p.fundo}</span>
+                            </div>
+                        </div>
+
+                        <!-- Métricas -->
+                        <div class="grid grid-cols-2 gap-3 text-xs">
+                            <div class="bg-charcoal p-3 rounded-lg border border-gold-500/10">
+                                <span class="text-slate-400 block text-[10px] uppercase">Fixação</span>
+                                <span class="text-white font-bold">${p.fixacao}</span>
+                            </div>
+                            <div class="bg-charcoal p-3 rounded-lg border border-gold-500/10">
+                                <span class="text-slate-400 block text-[10px] uppercase">Projeção</span>
+                                <span class="text-white font-bold">${p.projecao}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('perfumeModal').classList.remove('hidden');
+        }
+
+        function openArticleModal(id) {
+            const art = articlesData.find(item => item.id === id);
+            if(!art) return;
+
+            const modalContent = document.getElementById('articleModalContent');
+            modalContent.innerHTML = `
+                <div class="mb-6">
+                    <span class="text-xs uppercase tracking-widest text-gold-400 font-bold">${art.category} &bull; ${art.readTime}</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">${art.title}</h2>
+                </div>
+                <div class="h-64 rounded-2xl overflow-hidden mb-6 border border-gold-500/20">
+                    <img src="${art.image}" alt="${art.title}" class="w-full h-full object-cover">
+                </div>
+                <div class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+                    ${art.content}
+                </div>
+            `;
+
+            document.getElementById('articleModal').classList.remove('hidden');
+        }
+
+        // QUIZ SYSTEM STATE & LOGIC
+        let currentQuizStep = 0;
+        let selectedAnswers = [];
+
+        function renderQuizStep() {
+            const container = document.getElementById('quizContent');
+            const stepText = document.getElementById('quizStepText');
+            const percentText = document.getElementById('quizPercent');
+            const progressBar = document.getElementById('quizProgressBar');
+            const prevBtn = document.getElementById('quizPrevBtn');
+
+            const current = quizQuestions[currentQuizStep];
+            stepText.textContent = `Etapa ${currentQuizStep + 1} de ${quizQuestions.length}`;
+            const percent = Math.round(((currentQuizStep + 1) / quizQuestions.length) * 100);
+            percentText.textContent = `${percent}%`;
+            progressBar.style.width = `${percent}%`;
+
+            prevBtn.disabled = currentQuizStep === 0;
+
+            container.innerHTML = `
+                <h3 class="font-serif text-lg sm:text-xl font-bold text-white mb-6">${current.question}</h3>
+                <div class="space-y-3">
+                    ${current.options.map((opt, idx) => `
+                        <button onclick="handleQuizSelect('${opt.type}')" 
+                            class="w-full text-left p-4 rounded-xl glass-panel border border-gold-500/15 hover:border-gold-500/50 hover:bg-gold-500/10 text-xs text-slate-200 font-medium transition-all duration-300 flex items-center justify-between group">
+                            <span>${opt.label}</span>
+                            <i class="fa-solid fa-chevron-right text-gold-500 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                        </button>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function handleQuizSelect(type) {
+            selectedAnswers[currentQuizStep] = type;
+            if (currentQuizStep < quizQuestions.length - 1) {
+                currentQuizStep++;
+                renderQuizStep();
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            document.getElementById('quizContainer').classList.add('hidden');
+            const resultBox = document.getElementById('quizResult');
+            resultBox.classList.remove('hidden');
+
+            // Find most frequent family in answers
+            const count = {};
+            selectedAnswers.forEach(ans => count[ans] = (count[ans] || 0) + 1);
+            let topType = Object.keys(count).reduce((a, b) => count[a] > count[b] ? a : b);
+
+            const matchedPerfume = perfumesData.find(p => p.type === topType) || perfumesData[0];
+
+            document.getElementById('quizMatchCard').innerHTML = `
+                <div class="glass-panel p-6 rounded-2xl border border-gold-500/40 text-left gold-border-glow">
+                    <img src="${matchedPerfume.image}" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <span class="text-[10px] font-bold text-gold-400 uppercase tracking-widest">${matchedPerfume.brand}</span>
+                    <h4 class="font-serif text-xl font-bold text-white mb-2">${matchedPerfume.name}</h4>
+                    <p class="text-xs text-slate-300 mb-4">${matchedPerfume.descricao}</p>
+                    <button onclick="openPerfumeModal(${matchedPerfume.id})" class="w-full py-2 bg-gold-500 text-obsidian font-bold text-xs rounded-xl uppercase tracking-wider hover:bg-gold-400 transition-colors">
+                        Ver Todos os Detalhes
+                    </button>
+                </div>
+            `;
+        }
+
+        // INITIALIZATION & EVENT LISTENERS
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPerfumes();
+            renderArticles();
+            renderQuizStep();
+
+            // Filter button events
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-gold-500', 'text-obsidian');
+                        b.classList.add('glass-panel', 'text-slate-300');
+                    });
+                    btn.classList.remove('glass-panel', 'text-slate-300');
+                    btn.classList.add('bg-gold-500', 'text-obsidian');
+
+                    const filter = btn.getAttribute('data-filter');
+                    renderPerfumes(filter);
+                });
+            });
+
+            // Search inputs
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', (e) => {
+                renderPerfumes('all', e.target.value);
+            });
+
+            const searchInputMobile = document.getElementById('searchInputMobile');
+            searchInputMobile.addEventListener('input', (e) => {
+                renderPerfumes('all', e.target.value);
+            });
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+
+            // Quiz navigation
+            document.getElementById('quizPrevBtn').addEventListener('click', () => {
+                if (currentQuizStep > 0) {
+                    currentQuizStep--;
+                    renderQuizStep();
+                }
+            });
+
+            document.getElementById('resetQuizBtn').addEventListener('click', () => {
+                currentQuizStep = 0;
+                selectedAnswers = [];
+                document.getElementById('quizResult').classList.add('hidden');
+                document.getElementById('quizContainer').classList.remove('hidden');
+                renderQuizStep();
+            });
+
+            // Pyramid tab interaction
+            const pyramidSteps = document.querySelectorAll('.pyramid-step');
+            pyramidSteps.forEach(step => {
+                step.addEventListener('click', () => {
+                    pyramidSteps.forEach(s => s.classList.remove('bg-gold-500/20', 'border-gold-400'));
+                    step.classList.add('bg-gold-500/20', 'border-gold-400');
+
+                    const stepName = step.getAttribute('data-step');
+                    document.querySelectorAll('.pyramid-detail-content').forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.getElementById(`step-${stepName}-detail`).classList.remove('hidden');
+                });
+            });
+
+            // Modal Close Events
+            document.getElementById('closePerfumeModal').addEventListener('click', () => {
+                document.getElementById('perfumeModal').classList.add('hidden');
+            });
+            document.getElementById('closeArticleModal').addEventListener('click', () => {
+                document.getElementById('articleModal').classList.add('hidden');
+            });
+
+            // Close modal on click outside
+            window.addEventListener('click', (e) => {
+                if (e.target.id === 'perfumeModal') document.getElementById('perfumeModal').classList.add('hidden');
+                if (e.target.id === 'articleModal') document.getElementById('articleModal').classList.add('hidden');
+            });
+
+            // Newsletter Submit
+            document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                e.target.reset();
+                document.getElementById('newsletterSuccess').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('newsletterSuccess').classList.add('hidden');
+                }, 4000);
+            });
+        });
+    </script>
 </body>
 </html>
